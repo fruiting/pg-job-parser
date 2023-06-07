@@ -1,0 +1,1 @@
+CREATE TYPE jobs.parsers AS ENUM ('hh.ru');

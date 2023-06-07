@@ -1,5 +1,0 @@
-CREATE TABLE jobs.tb_user_has_position (
-   id BIGINT NOT NULL PRIMARY KEY,
-   user_id BIGINT NOT NULL FOREIGN KEY REFERENCES jobs.tb_users ON DELETE CASCADE,
-   position_id BIGINT NOT NULL FOREIGN KEY REFERENCES jobs.tb_users ON DELETE CASCADE,
-);

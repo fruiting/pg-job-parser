@@ -1,3 +1,3 @@
 FROM postgres:15.3
 
-COPY ./migrations /docker-entrypoint-initdb.d/
+COPY src /docker-entrypoint-initdb.d/
