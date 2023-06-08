@@ -9,4 +9,4 @@ CREATE TABLE jobs.tb_positions (
     UNIQUE(name, parser)
 );
 
-CREATE INDEX ix_tb_jobs_positions ON jobs.tb_positions (parser, name)
+CREATE UNIQUE INDEX ix_tb_jobs_positions ON jobs.tb_positions (parser, name)

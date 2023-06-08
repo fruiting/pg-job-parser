@@ -1,4 +1,4 @@
-CREATE FUNCTION jobs.get_all_jobs_info_by_users
+CREATE FUNCTION jobs.get_jobs_info
 (
     p_position_name TEXT,
     p_parser jobs.parsers,
@@ -26,6 +26,6 @@ BEGIN
             FROM jobs.tb_positions tp
             JOIN jobs.tb_user_has_position tup ON tp.id = tup.position_id
             JOIN jobs.tb_users tu ON tup.user_id = tu.id
-            WHERE tp.name = p_position_name AND tp.date >= p_from AND tp.date <= p_to;
+            WHERE tp.name = p_position_name AND tp.parser = p_parser AND tp.date >= p_from AND tp.date <= p_to;
 END;
 $BODY$
